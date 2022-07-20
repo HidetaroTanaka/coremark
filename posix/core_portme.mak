@@ -33,7 +33,7 @@ ifndef NO_LIBRT
 #Flag: LFLAGS_END
 #	Define any libraries needed for linking or other flags that should come at the end of the link line (e.g. linker scripts). 
 #	Note: On certain platforms, the default clock_gettime implementation is supported but requires linking of librt.
-LFLAGS_END += -lrt
+
 endif
 # Flag: PORT_SRCS
 #	Port specific source files can be added here

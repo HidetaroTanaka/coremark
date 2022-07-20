@@ -79,12 +79,12 @@ $(OPATH)$(PORT_DIR):
 
 compile: $(OPATH) $(OPATH)$(PORT_DIR) $(OBJS) $(HEADERS) 
 link: compile 
-	$(LD) $(LFLAGS) $(XLFLAGS) $(OBJS) $(LOUTCMD)
+	riscv64-unknown-elf-gcc $(LFLAGS) $(XLFLAGS) $(OBJS) $(LOUTCMD)
 	
 else
 
 compile: $(OPATH) $(SRCS) $(HEADERS) 
-	$(CC) $(CFLAGS) $(XCFLAGS) $(SRCS) $(OUTCMD)
+	riscv64-unknown-elf-gcc $(CFLAGS) $(XCFLAGS) $(SRCS) $(OUTCMD)
 link: compile 
 	@echo "Link performed along with compile"
 
